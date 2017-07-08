@@ -8,28 +8,28 @@ def function_food_growth(array):
     population = int(array[0:1][0])
     fertility_factor = int(array[5:6][0])
     new_food = (fertility_of_land - fertility_factor * population) + food_supplie
-    array[2:3] = new_food
+    array[2:3] = [new_food]
     return array
 
 def function_food_consumption(array):
     food_supplie = int(array[2:3][0])
     population = int(array[0:1][0])
     new_food = food_supplie - population
-    array[2:3] = new_food
+    array[2:3] = [new_food]
     return array
 
 def function_deaths(array):
     population = int(array[0:1][0])
     death_rate = int(array[4:5][0])
     new_population = round(population / death_rate)
-    array[0:1] = new_population
+    array[0:1] = [new_population]
     return array
 
 def function_births(array):
     population = int(array[0:1][0])
     birth_rate = int(array[3:4][0])
     new_population = round(population * birth_rate)
-    array[0:1] = new_population
+    array[0:1] = [new_population]
     return array
 
 def calculate_average(array1, array2):
