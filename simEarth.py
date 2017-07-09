@@ -1,12 +1,12 @@
 import numpy as np
 
-state = np.array = ([100, 200, 130, 1.05, 1.02, 0.75])
+state = np.array([100, 200, 130, 1.05, 1.02, 0.75])
 
 def function_food_growth(array):
-    food_supplie = int((array[2:3])[0])
-    fertility_of_land = int(array[1:2][0])
-    population = int(array[0:1][0])
-    fertility_factor = int(array[5:6][0])
+    food_supplie = array[2]
+    fertility_of_land = array[1]
+    population = array[0]
+    fertility_factor = array[5]
     new_food = (fertility_of_land - fertility_factor * population) + food_supplie
     array[2:3] = [new_food]
     return array
